@@ -5,6 +5,8 @@ int main(){
     //logic for takig input
     int n;
     scanf("%d",&n);
+
+    //logic for special case
     if(n<1 || n>MAX){
         printf("Invalid input for n\n");
         return 1;
@@ -25,16 +27,17 @@ int main(){
 
     }
 
-    //logic for update the prefix array
+    //logic for taking input
     int value,index;
     scanf("%d %d",&value,&index);
 
+    //logic for taking input
     if(index<0 || index>=n){
         printf("Invalid input\n");
         return 1;
     }
     
-    
+    //logic for updating 
     if(array[index]<value){
         int x=value-array[index];
         for(int i=index;i<n;i++){
@@ -47,13 +50,13 @@ int main(){
         }
     }
 
-    //logic for update array
+    //logic for update main array
     int oldval=array[index];
     array[index]=value;
 
 
 
-    //logic for printing the prefix array
+    //logic for printing output
 
     for(int i=0;i<n;i++){
         printf("%d ",prefix[i]);
@@ -61,5 +64,6 @@ int main(){
 
     printf("\n");
 
+    
     return 0;
 }
